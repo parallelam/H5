@@ -1,3 +1,5 @@
+// ToDo: 1) Incorporate draining status bar in lieu of countdown timer. 2) Award points for correct answers based on how quickly answered. 3) Create secondary timer to display time before next question right/wrong answer.
+
 var panel = $('.triviaArea');
 var countStartNumber = 15;
 isRunning=false;
@@ -9,13 +11,12 @@ $(document).on('click', '.answer-button', function(e) {
     game.clicked(e);
 });
 $('.start').text('Play The Game');
-$(document).on('click', '.start', function(e) {
+$(document).on('click', '.start', function() {
     $('.timer').append('<h2>Time Remaining: <span id="counter-number">15</span> Seconds</h2>');
     game.loadQuestion();
     $('.start').text('The Game Has Started!');
     isRunning=!isRunning;
 });
-
 const triviaQuestions = [
     {
         question: "Who has the most wins as a head coach in the NFL?",
@@ -115,7 +116,8 @@ var game = {
       panel.append('<h3>Correct: ' + game.correct + '</h3>');
       panel.append('<h3>Incorrect: ' + game.incorrect + '</h3>');
       panel.append('<h3>Timed Out: ' + (triviaQuestions.length - (game.incorrect + game.correct)) + '</h3>');
-      panel.append('<br><button class="o-menu__item / t-menu__item / start-over">Again?</button>');
+      panel.append('<br><button class="o-menu__item / t-menu__item / start-over">Play Again?</button>');
+      $('.start').text('The Game Has Ended!');
     },
     clicked: function(e) {
       clearInterval(timer);  
@@ -143,9 +145,9 @@ var game = {
       panel.html('<h2>Right!</h2>');
       panel.append('<h3>'+triviaQuestions[game.currentQuestion].info+'</h3>');
       if (game.currentQuestion === triviaQuestions.length - 1){
-        setTimeout(game.results, 4 * 1000);
+        setTimeout(game.results, 5 * 1000);
       } else {
-        setTimeout(game.nextQuestion, 4 * 1000);
+        setTimeout(game.nextQuestion, 5 * 1000);
       }
     },
     reset: function(){
@@ -156,7 +158,6 @@ var game = {
       this.loadQuestion();
     }
   };
-
 document.querySelector('.js-change-theme').innerHTML = "Switch to Day Display";
 document
     .querySelector('.js-change-theme')
