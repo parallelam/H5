@@ -61,3 +61,14 @@ body {
   border-radius: 4px;
   border-color: #ddd;
 }
+
+.answer-button {
+  display:block;
+  width:50%;
+  height:20%;
+  margin: 0 auto;
+  border:solid;
+  cursor: pointer;
+  background:transparent;
+  font-size: 35px;
+}

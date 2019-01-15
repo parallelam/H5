@@ -87,7 +87,7 @@ var game = {
       timer = setInterval(game.countdown, 1000);
       panel.html('<h2>' + triviaQuestions[this.currentQuestion].question + '</h2>' );
       for (var i = 0; i<triviaQuestions[this.currentQuestion].answers.length; i++){
-        panel.append('<button class="answer-button" id="button"' + 'data-name="' + triviaQuestions[this.currentQuestion].answers[i] + '">' + triviaQuestions[this.currentQuestion].answers[i]+ '</button>');
+        panel.append('<button class="answer-button o-menu__item / t-menu__item" id="button"' + 'data-name="' + triviaQuestions[this.currentQuestion].answers[i] + '">' + triviaQuestions[this.currentQuestion].answers[i]+ '</button>');
       }
     },
     nextQuestion: function(){
