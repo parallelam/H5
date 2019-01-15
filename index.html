@@ -5,27 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Reset CSS -->
-    <!--link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css"-->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css">
     <!-- Bootstrap -->
-    <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- Style CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script> 
-    <title>NFL Trivia</title>
-</head>
-<body>
-    <div id="triviaContainer">
-        <h1>NFL Trivia</h1>
-        <div id="triviaSubwrapper">
-          <div id="triviaArea">
-            <button id="start">Start</button>
-          </div>
-        </div>
-      </div>
-    <!-- JavaScript -->
-    <script type="text/javascript" src="assets/javascript.js">
-    </script>
     <!-- jQuery -->
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script> 
+    <title>2018 NFL Trivia</title>
+</head>
+<body class="c-container / t--dark">
+  <div class="container t-menu">
+    <div class="jumbotron t-menu__item">
+      <h1>10 NFL Trivia Questions From 2018</h1>
+    </div>    
+  
+    <div class="panel panel-default t-menu">
+        <div class="panel-heading t-menu__item timer">Time</div>
+    </div>
+    <br>
+
+    <div class="panel panel-default t-menu triviaContainer">
+      <div class="panel-body t-menu__item triviaArea">Trivia
+      </div>
+    </div>
+    <br>
+
+    <button class="o-menu__item / t-menu__item / start"></button>
+    <br>
+
+    <button class="o-menu__item / t-menu__item / js-change-theme"></button>
+    <br>
+
+  </div>
+  
+  <!-- JavaScript -->
+  <script type="text/javascript" src="assets/javascript.js"></script>
 </body>
 </html>
