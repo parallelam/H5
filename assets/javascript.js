@@ -1,7 +1,9 @@
-// ToDo: 1) Incorporate draining status bar in lieu of countdown timer. 2) Award points for correct answers based on how quickly answered. 3) Create secondary timer to display time before next question right/wrong answer.
+// ToDo: 1) Incorporate draining status bar in lieu of countdown timer. 2) Award points for correct answers based on how quickly answered. 3) Create secondary timer to display time before next question right/wrong answer. 4) Modularize code/questions.
+  // 5) Add 40 more questions and break the game into rounds 1 - 5. 6) Fix issue with multiple clicks of .start class causing bug demonstrated in class.
 
 var panel = $('.triviaArea');
 var countStartNumber = 15;
+var nextQuestionTimer = 5;
 isRunning=false;
 
 $(document).on('click', '.start-over', function(e) {
