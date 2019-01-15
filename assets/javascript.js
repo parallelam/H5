@@ -1,5 +1,6 @@
 var panel = $('.triviaArea');
 var countStartNumber = 15;
+isRunning=false;
 
 $(document).on('click', '.start-over', function(e) {
     game.reset();
@@ -7,11 +8,12 @@ $(document).on('click', '.start-over', function(e) {
 $(document).on('click', '.answer-button', function(e) {
     game.clicked(e);
 });
-$('.start').text('Start The Game');
+$('.start').text('Play The Game');
 $(document).on('click', '.start', function(e) {
     $('.timer').append('<h2>Time Remaining: <span id="counter-number">15</span> Seconds</h2>');
     game.loadQuestion();
     $('.start').text('The Game Has Started!');
+    isRunning=!isRunning;
 });
 
 const triviaQuestions = [
@@ -85,7 +87,7 @@ var game = {
       timer = setInterval(game.countdown, 1000);
       panel.html('<h2>' + triviaQuestions[this.currentQuestion].question + '</h2>' );
       for (var i = 0; i<triviaQuestions[this.currentQuestion].answers.length; i++){
-        panel.append('<button class="btn btn-secondary answer-button" id="button"' + 'data-name="' + triviaQuestions[this.currentQuestion].answers[i] + '">' + triviaQuestions[this.currentQuestion].answers[i]+ '</button>');
+        panel.append('<button class="answer-button" id="button"' + 'data-name="' + triviaQuestions[this.currentQuestion].answers[i] + '">' + triviaQuestions[this.currentQuestion].answers[i]+ '</button>');
       }
     },
     nextQuestion: function(){
@@ -172,4 +174,4 @@ document
       } else {
           document.querySelector('.js-change-theme').innerHTML = 'Switch to Day Display';
       }
-  })
+  })  
