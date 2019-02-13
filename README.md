@@ -1,6 +1,6 @@
 # H5
-H5
-An activity intended to demonstrate a proficiency with API AJAX calls and dynamic rendering of responding information.
+
+An activity intended to demonstrate a proficiency with timers, objects in the form of an NFL Themed 10 Question Timed Trivia.
 
 Technologies Incorporated:
 
@@ -15,12 +15,6 @@ Bootstrap
 Reset CSS
 
 jQuery
-
-AJAX
-
-Graphic Interchange Format - GIF
-
-GIPHY API
 
 GitBash
 
