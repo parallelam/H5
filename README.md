@@ -1,4 +1,4 @@
-# H5
+# NFL Themed Timed Trivia
 
 An activity intended to demonstrate a proficiency with timers, objects in the form of an NFL Themed 10 Question Timed Trivia.
 
