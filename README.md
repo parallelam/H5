@@ -21,3 +21,11 @@ GitBash
 Created with Visual Studio Code
 
 Extensions: Beautify, ESLint, Live Server, TODO Highlight, Open In Browser, View In Browser
+
+[W3 Schools Article On JS Timing Events](https://www.w3schools.com/js/js_timing.asp)
+
+[Khan Academy's jQuery Course](https://www.khanacademy.org/computing/computer-programming/html-js-jquery)
+
+[Free Code Camp's jQuery Course](https://learn.freecodecamp.org/front-end-libraries/jquery/)
+
+[jQuery Documentation](https://jquery.com/)
